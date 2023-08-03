@@ -1,0 +1,18 @@
+{% extends 'home/base.html' %}
+{% block content %}
+<div class="mycontainer">
+
+    <div class="upload-container">
+        <h1>Upload CFR Boundary</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="file">Select File:</label>
+                <input type="file" id="file" name="file" required>
+            </div>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+    </div>
+
+{% endblock %}
